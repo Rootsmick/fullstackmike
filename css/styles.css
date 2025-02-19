@@ -50,6 +50,16 @@ body {
 	line-height: 25px;
 	color: white;
 	font-weight: bold;
+	animation: fillBar 2s ease-in-out forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-width);
+    }
 }
 
 .timeline {
@@ -109,3 +119,4 @@ body {
 .text-justify {
 	text-align: justify;
 }
+
