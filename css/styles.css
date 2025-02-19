@@ -1,0 +1,111 @@
+.navbar-brand {
+	font-weight: bold;
+}
+
+.footer {
+	background: #d4c3a1;
+	padding: 10px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.bg-light {
+	background-color: rgb(212, 195, 161, 0.7) !important;
+}
+
+.social-icons img {
+	width: 30px;
+	margin: 0 10px;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	flex: 1;
+}
+
+.carousel-item img {
+	height: 400px;
+	object-fit: cover;
+}
+
+
+.skill-bar {
+	background-color: #e0e0e0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.skill-level {
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	color: white;
+	font-weight: bold;
+}
+
+.timeline {
+	position: relative;
+	max-width: 800px;
+	margin: auto;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 4px;
+	background-color: #ddd;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -2px;
+}
+
+.timeline-item {
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.timeline-item:nth-child(odd) {
+	left: 0;
+	text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+	left: 50%;
+}
+
+.timeline-item::after {
+	display: none;
+}
+
+.timeline-content {
+	display: none;
+	background: #f8f9fa;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bg-yellow {
+	background-color: yellow;
+}
+
+.shadow {
+	box-shadow: black;
+}
+
+.text-justify {
+	text-align: justify;
+}
