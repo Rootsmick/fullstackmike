@@ -10,7 +10,7 @@
 }
 
 .bg-light {
-	background-color: rgb(212, 195, 161, 0.7) !important;
+	background-color: hsla(40, 37%, 73%) !important;
 }
 
 .social-icons img {
@@ -55,12 +55,13 @@ body {
 }
 
 @keyframes fillBar {
-    from {
-        width: 0;
-    }
-    to {
-        width: var(--skill-width);
-    }
+	from {
+		width: 0;
+	}
+
+	to {
+		width: var(--skill-width);
+	}
 }
 
 .timeline {
@@ -121,3 +122,35 @@ body {
 	text-align: justify;
 }
 
+.cv-btn {
+	background-color: #d4c3a1;
+}
+
+.cv-btn:hover {
+	background-color: #bdad8d;
+}
+
+@media (min-width: 993px) {
+	.card-1 {
+		margin-left: 25%;
+	}
+
+	.card-2 {
+		margin-left: 45%;
+	}
+}
+
+#backToTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	display: none;
+	/* Nasconde inizialmente */
+	z-index: 1000;
+	/* Assicura che sia sopra gli altri elementi */
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
