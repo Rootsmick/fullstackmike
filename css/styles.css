@@ -154,3 +154,9 @@ body {
 .card:hover {
 	transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+	.col-bot {
+		margin-bottom: 15px;
+	}
+}
