@@ -1,21 +1,126 @@
+.roboto {
+	font-family: "Roboto", serif;
+	font-optical-sizing: auto;
+	font-weight: weight;
+	font-style: normal;
+	font-variation-settings:
+		"wdth" 100;
+}
+
+.card-1 {
+	position: relative;
+}
+
+.year-badge {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	background-color: #d5dce4;
+	color: #424242;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 999;
+}
+
+.card-2 {
+	position: relative;
+}
+
+.year-badge-top-right {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	background-color: #d5dce4;
+	color: #424242;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 999;
+}
+
+.year-badge-bottom-right {
+	position: absolute;
+	bottom: -10px;
+	right: -10px;
+	background-color: #efeeee;
+	color: #424242;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 999;
+}
+
+.year-badge-bottom-left {
+	position: absolute;
+	bottom: -10px;
+	left: -10px;
+	background-color: #efeeee;
+	color: #424242;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 999;
+}
+
+.year-line {
+	position: absolute;
+	width: 4px;
+	background-color: #555;
+	top: 10px;
+	bottom: 10px;
+	right: 10px;
+	z-index: 998;
+}
+
+.year-line-left {
+	position: absolute;
+	width: 4px;
+	background-color: #555;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	z-index: 998;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	font-family: "Roboto", serif;
+}
+
 .navbar-brand {
 	font-weight: bold;
 }
 
 .footer {
-	background: #d4c3a1;
+	background: #efeeee;
 	padding: 10px;
 	text-align: center;
 	margin-top: 20px;
 }
 
 .bg-light {
-	background-color: hsla(40, 37%, 73%) !important;
+	background-color: #d5dce4 !important;
 }
 
-.social-icons img {
+.social-icons svg {
 	width: 30px;
-	margin: 0 10px;
+	height: 30px;
 }
 
 html,
@@ -37,6 +142,39 @@ body {
 	object-fit: cover;
 }
 
+@media (min-width: 992px) {
+	.con-index {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 80vh;
+		flex-direction: column;
+	}
+
+	.carousel {
+		width: 100%;
+	}
+
+	.card-1 {
+		margin-left: 25%;
+	}
+
+	.card-2 {
+		margin-left: 45%;
+	}
+}
+
+@media (min-width: 2001px) {
+	.carousel-item img {
+		height: 800px;
+		object-fit: cover;
+	}
+
+	.big-s {
+		display: flex !important;
+		align-items: center !important;
+	}
+}
 
 .skill-bar {
 	background-color: #e0e0e0;
@@ -123,21 +261,15 @@ body {
 }
 
 .cv-btn {
-	background-color: #d4c3a1;
+	/* background-color: #d4c3a1; */
+	/* background-color: #efeeee; */
+	background-color: #d5dce4;
 }
 
 .cv-btn:hover {
-	background-color: #bdad8d;
-}
-
-@media (min-width: 993px) {
-	.card-1 {
-		margin-left: 25%;
-	}
-
-	.card-2 {
-		margin-left: 45%;
-	}
+	background-color: #efeeee;
+	/* background-color: #d5dce4; */
+	/* background-color: #bdad8d; */
 }
 
 #backToTop {

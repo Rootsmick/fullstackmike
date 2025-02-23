@@ -29,23 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-function toggleDetails(card) {
-	let details = card.querySelector(".details");
-	details.style.display = details.style.display === "none" ? "block" : "none";
-}
+// function toggleDetails(card) {
+// 	let details = card.querySelector(".details");
+// 	details.style.display = details.style.display === "none" ? "block" : "none";
+// }
 document.addEventListener("DOMContentLoaded", function () {
 	var backToTopElement = document.getElementById('backToTop');
 
 	window.addEventListener('scroll', function () {
 		if (window.scrollY > 50) {
-			backToTopElement.style.display = 'block'; // Mostra il bottone quando scorre oltre 50px
+			backToTopElement.style.display = 'block'; 
 		} else {
-			backToTopElement.style.display = 'none';  // Nasconde il bottone se è meno di 50px
+			backToTopElement.style.display = 'none';
 		}
 	});
 
 	backToTopElement.addEventListener('click', function (event) {
 		event.preventDefault();
-		window.scrollTo({ top: 0, behavior: 'smooth' }); // Torna su con scroll lento
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 	});
 });
