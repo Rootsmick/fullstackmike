@@ -326,10 +326,36 @@ body {
 	.col-bot {
 		margin-bottom: 15px;
 	}
+	.typed-cursor {
+		font-size: inherit;
+		color: inherit;
+		display: inline;
+		font-size: large !important;
+	}
+	#element {
+		font-size: large !important;
+		font-weight: 600;
+	}
 }
 
 .st3 {
 	fill-rule: evenodd;
 	clip-rule: evenodd;
 	fill: #FFFFFF;
+}
+
+.typed-cursor {
+	font-size: inherit;
+	color: inherit;
+	display: inline;
+	font-size: xx-large;
+}
+
+#element-container {
+	display: inline-block;
+}
+
+#element {
+	font-size: xx-large;
+	font-weight: 600;
 }

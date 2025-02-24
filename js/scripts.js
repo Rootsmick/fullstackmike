@@ -87,17 +87,33 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+// 	var typed3 = new Typed('#element', {
+// 		strings: ['- Front-End', '- Back-End', '- Full Stack Developer -'],
+// 		typeSpeed: 40,
+// 		backSpeed: 50,
+// 		backDelay: 0, // Aspetta prima di cancellare
+// 		startDelay: 0, // Aspetta prima di partire
+// 		showCursor: false,
+// 		cursorChar: '|',
+// 		loop: false,
+// 		smartBackspace: true,
+// 	});
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
 	var typed3 = new Typed('#element', {
 		strings: ['- Front-End', '- Back-End', '- Full Stack Developer -'],
-		typeSpeed: 40,
+		typeSpeed: 50,
 		backSpeed: 50,
-		backDelay: 0, // Aspetta prima di cancellare
-		startDelay: 0, // Aspetta prima di partire
-		showCursor: false,
+		backDelay: 10,
+		startDelay: 500,
+		showCursor: true,
 		cursorChar: '|',
 		loop: false,
 		smartBackspace: true,
+		onComplete: function () {
+			document.querySelector('.typed-cursor').style.display = 'none'; // Nasconde il cursore
+		}
 	});
 });
-
