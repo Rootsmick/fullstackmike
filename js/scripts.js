@@ -86,3 +86,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+	var typed3 = new Typed('#element', {
+		strings: ['- Front-End', '- Back-End', '- Full Stack Developer -'],
+		typeSpeed: 40,
+		backSpeed: 50,
+		backDelay: 0, // Aspetta prima di cancellare
+		startDelay: 0, // Aspetta prima di partire
+		showCursor: false,
+		cursorChar: '|',
+		loop: false,
+		smartBackspace: true,
+	});
+});
+
