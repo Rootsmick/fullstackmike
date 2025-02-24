@@ -194,10 +194,19 @@ body {
 		object-fit: cover;
 	}
 
-	.big-s {
+	/* .big-s {
 		display: flex !important;
 		align-items: center !important;
 	}
+
+	.con-index {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	} */
 }
 
 .skill-bar {
