@@ -167,13 +167,13 @@ body {
 }
 
 @media (min-width: 992px) {
-	.con-index {
+	/*.con-index {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		min-height: 80vh;
 		flex-direction: column;
-	}
+	}*/
 
 	.carousel {
 		width: 100%;
