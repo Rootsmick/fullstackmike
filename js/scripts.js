@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			return;
 		}
 
+		if (messaggio.length < 10) {
+			alert("Il messaggio deve contenere almeno 10 caratteri!");
+			return;
+		}
+
 		var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!emailPattern.test(email)) {
 			alert("Inserisci un'email valida!");
@@ -29,35 +34,37 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+
+
 function toggleDetails(card) {
-    let details = card.querySelector(".details");
+	let details = card.querySelector(".details");
 
-    document.querySelectorAll(".details").forEach(openDetail => {
-        if (openDetail !== details && openDetail.style.display === "block") {
-            openDetail.style.height = "0";
+	document.querySelectorAll(".details").forEach(openDetail => {
+		if (openDetail !== details && openDetail.style.display === "block") {
+			openDetail.style.height = "0";
 
 
-            setTimeout(() => {
-                openDetail.style.display = "none"; 
-            }, 300);
-        }
-    });
+			setTimeout(() => {
+				openDetail.style.display = "none";
+			}, 300);
+		}
+	});
 
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-        details.style.height = details.scrollHeight + "px";
+	if (details.style.display === "none" || details.style.display === "") {
+		details.style.display = "block";
+		details.style.height = details.scrollHeight + "px";
 
-        setTimeout(() => {
+		setTimeout(() => {
 
-            card.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 300);
-    } else {
+			card.scrollIntoView({ behavior: "smooth", block: "center" });
+		}, 300);
+	} else {
 
-        details.style.height = "0";
-        setTimeout(() => {
-            details.style.display = "none";
-        }, 300);
-    }
+		details.style.height = "0";
+		setTimeout(() => {
+			details.style.display = "none";
+		}, 300);
+	}
 }
 
 
@@ -68,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	window.addEventListener('scroll', function () {
 		if (window.scrollY > 50) {
-			backToTopElement.style.display = 'block'; 
+			backToTopElement.style.display = 'block';
 		} else {
 			backToTopElement.style.display = 'none';
 		}
