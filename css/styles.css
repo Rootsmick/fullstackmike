@@ -7,6 +7,20 @@
 		"wdth" 100;
 }
 
+.card {
+    overflow: hidden; /* Se il contenuto esce dalla card */
+    max-height: none; /* Rimuovi eventuali limiti di altezza se presenti */
+    transition: max-height 0.3s ease-in-out; /* Anima l'altezza per l'effetto di espansione */
+}
+
+.details {
+    display: none; /* Per default nascondi il contenuto */
+    overflow: hidden;
+    transition: height 0.3s ease-in-out; /* Aggiungi una transizione per un'animazione fluida */
+    height: 0; /* Imposta un'altezza di 0 per nascondere il contenuto */
+}
+
+
 .card-1 {
 	position: relative;
 }
@@ -91,7 +105,6 @@
 	z-index: 998;
 }
 
-
 h1,
 h2,
 h3,
@@ -101,6 +114,10 @@ h6,
 p,
 a {
 	font-family: "Roboto", serif;
+}
+
+.navbar li:hover{
+	font-weight: 600;
 }
 
 .navbar-brand {

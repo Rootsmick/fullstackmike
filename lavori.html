@@ -68,7 +68,7 @@
     <!-- I MIEI LAVORI -->
     <div class="container d-flex flex-column align-items-center justify-content-center" style="margin-top: 100px;">
         <h1 class="text-center">I miei lavori</h1>
-        <p class="text-center">Clicca su un elemento per visualizzare i dettagli.</p>
+        <p class="text-center d-lg-block d-none">Clicca su un elemento per visualizzare i dettagli.</p>
         <h6 class="text-center">
             <a class="text-dark btn btn-sm d-lg-none d-block cv-btn" download href="doc/CV_RADICCI_05.2024.pdf"
                 target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -89,89 +89,119 @@
         </h6>
 
         <div class="container-fluid mt-4">
-            <div id="accordionGroup">
-                <div class="row">
-                    <div class="col-md-4 mb-4 card-1">
-                        <span class="year-badge">2025</span>
-                        <div class="card shadow-lg text-center p-3" data-bs-toggle="collapse"
-                            data-bs-target="#radicciworks">
-                            <h4>Sito Vetrina</h4>
-                            <div id="radicciworks" class="collapse" data-bs-parent="#accordionGroup">
-                                <p class="details">
-                                    Realizzazione del sito vetrina con le mie competenze, i miei lavori ed un form di
-                                    contatto.<br>
-                                    <a class="text-dark" href="https://radicciworks.altervista.org">RadicciWorks</a>
-                                </p>
-                            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4 card-1" onclick="toggleDetails(this)">
+                    <span class="year-badge">Oggi</span>
+                    <span class="year-line-left"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4 class="mb-0">Full Stack Developer</h4>
+                        <div class="details">
+                            <p>Analisi e progettazione front-end e back-end volti allo sviluppo di
+                                software e siti web</p>
                         </div>
                     </div>
+                    <span class="year-badge-bottom-left">2024</span>
                 </div>
+            </div>
 
-                <div class="row mt-4">
-                    <div class="col-md-4 offset-md-4 mb-4 card-2">
-                        <span class="year-badge-top-right">2025</span>
-                        <span class="year-line"></span>
-                        <div class="card shadow-lg text-center p-3" data-bs-toggle="collapse"
-                            data-bs-target="#techiaroot">
-                            <h4>TechIAroot</h4>
-                            <div id="techiaroot" class="collapse" data-bs-parent="#accordionGroup">
-                                <p class="details">
-                                    Prima esperienza di sviluppo web utilizzando HTML, CSS, Bootstrap, JavaScript, PHP e
-                                    MySQL.
-                                    <a class="text-dark" href="https://techiaroot.netsons.org">TechIAroot</a>
-                                </p>
-                            </div>
-                        </div>
-                        <span class="year-badge-bottom-right">2024</span>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-4 mb-4 card-1">
-                        <span class="year-badge">2025</span>
-                        <span class="year-line-left"></span>
-                        <div class="card shadow-lg text-center p-3" data-bs-toggle="collapse"
-                            data-bs-target="#ifts-course">
-                            <h4>Web Developer</h4>
-                            <h5>(corso IFTS)</h5>
-                            <div id="ifts-course" class="collapse" data-bs-parent="#accordionGroup">
-                                <p class="details">Analisi e progettazione front-end e back-end volti allo sviluppo di
-                                    siti
-                                    web.</p>
-                            </div>
-                        </div>
-                        <span class="year-badge-bottom-left">2024</span>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-4 offset-md-4 mb-4 card-2">
-                        <span class="year-badge-top-right">2023</span>
-                        <span class="year-line"></span>
-                        <div class="card shadow-lg text-center p-3" data-bs-toggle="collapse"
-                            data-bs-target="#wind-career">
-                            <h4>Store Specialist</h4>
-                            <div id="wind-career" class="collapse" data-bs-parent="#accordionGroup">
-                                <p class="details">Vendita e consulenza in negozio di telefonia fissa, mobile ed energia
-                                    per
-                                    i maggiori brand nazionali.</p>
-                            </div>
-                        </div>
-                        <span class="year-badge-bottom-right">2015</span>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-4 mb-4 card-1">
-                        <span class="year-badge">2015</span>
-                        <div class="card shadow-lg text-center p-3" data-bs-toggle="collapse"
-                            data-bs-target="#cube-internship">
-                            <h4>2015 - Social Media Manager</h4>
-                            <h6>Tirocinio presso CUBE Comunicazione, Bari</h6>
-                            <div id="cube-internship" class="collapse" data-bs-parent="#accordionGroup">
-                                <p class="details">Gestione social, PR ed organizzazione eventi.</p>
-                            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 offset-md-4 mb-4 card-2" onclick="toggleDetails(this)">
+                    <span class="year-badge-top-right">2025</span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4 class="mb-0">Sito Vetrina</h4>
+                        <div class="details">
+                            <p>
+                                Progetto finale del corso IFTS a cui ho partecipato. Sito vetrina con le mie
+                                competenze, i miei lavori ed un form di
+                                contatto. <br> Ho utilizzato:
+                            <ul class="text-justify">
+                                <li>HTML per la base del sito</li>
+                                <li>Bootstrap per gli stili e le animazioni</li>
+                                <li>JavaScript per l'interazione con l'utente</li>
+                                <li>PHP per la gestione del form di contatto</li>
+                            </ul>
+                            <p>Consultalo qui: <a class="text-dark" href="https://fullstackmike.altervista.org"
+                                    target="_blank">FullStackMike</a></p>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4 card-1" onclick="toggleDetails(this)">
+                    <span class="year-badge">2025</span>
+                    <span class="year-line-left"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4 class="mb-0">Sito TechIAroot</h4>
+                        <div class="details">
+                            <p>
+                                La mia prima esperienza di sviluppo web utilizzando HTML, CSS, Bootstrap,
+                                JavaScript, PHP e
+                                MySQL per un progetto assegnatomi.<br>Ho gestito:
+                            </p>
+                            <ul class="text-justify">
+                                <li>Home page con modale e carosello</li>
+                                <li>Login</li>
+                                <li>Creazione e modifica di articoli in database</li>
+                                <li>Gestione di articoli in database</li>
+                                <li>Modulo di ricerca</li>
+                                <li>Form di contatto</li>
+                                <li>Integrazione dinamica di PHP con il DB</li>
+                                <li>Stili di Bootstrap con aggiunta di JS</li>
+                            </ul>
+                            <p>Dagli un'occhiata: <a class="text-dark"
+                                    href="https://techiaroot.netsons.org" target="_blank">TechIAroot</a></p>
+                        </div>
+                    </div>
+                    <span class="year-badge-bottom-left">2024</span>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4 offset-md-4 mb-4 card-2" onclick="toggleDetails(this)">
+                    <span class="year-badge-top-right">2023</span>
+                    <span class="year-line"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4>Store Specialist</h4>
+                        <h6 class="mb-0">OnlineBari - IdeaNova - FCom - Comunicando</h6>
+                        <div class="details">
+                            <p>Nel corso degli anni ho svolto</p>
+                            <ul class="text-justify">
+                                <li>Accoglienza e gestione della clientela all'interno del punto vendita designato.
+                                </li>
+                                <li>Vendita e consulenza su prodotti e servizi al dettaglio.</li>
+                                <li>Vendita e consulenza su prodotti finanziari.</li>
+                                <li>Assistenza Tecnica hardware e software.</li>
+                                <li>Gestione della Cassa e del registro corrispettivi.</li>
+                                <li>Gestione degli ordini e delle bolle di carico.</li>
+                                <li>Gestione dell'allestimento secondo gli standard imposti dall'azienda.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="year-badge-bottom-right">2015</span>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4 card-1" onclick="toggleDetails(this)">
+                    <span class="year-badge">2015</span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4>Social Media Manager</h4>
+                        <h6 class="mb-0">(Tirocinio) CUBE Comunicazione - Bari</h6>
+                        <div class="details">
+                            <p>In questo percorso ho gestito:</p>
+                            <ul class="text-justify">
+                                <li>Pagine social della clientela.</li>
+                                <li>Fissaggio appuntamenti telefonici.</li>
+                                <li>Pubbliche relazioni.</li>
+                                <li>Ricerca e gestione delle risorse.</li>
+                                <li>Organizzazione eventi.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center mt-3">
                 <a href="#" id="backToTop" aria-label="Torna su" style="display: none;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="color: gray;"
@@ -181,6 +211,133 @@
                     </svg>
                 </a>
             </div>
+        </div>
+
+        <h1 class="text-center">La mia istruzione</h1>
+
+        <div class="container-fluid mt-4">
+
+            <div class="row mt-4">
+                <div class="col-md-4 offset-md-4 mb-4 card-2" onclick="toggleDetails(this)">
+                    <span class="year-badge">In corso</span>
+                    <span class="year-line-left"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4>Corso di Laurea in<br>Informatica per le Aziende Digitali</h4>
+                        <h6 class="mb-0">Unipegaso</h6>
+                    </div>
+                    <span class="year-badge-bottom-left">2024</span>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4 card-1" onclick="toggleDetails(this)">
+                    <span class="year-badge">2025</span>
+                    <span class="year-line-left"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4>Corso IFTS</h4>
+                        <h6 class="mb-0">KRONOS S.R.L - Bari</h6>
+                        <div class="details">
+                            <p class="details">
+                                Corso finanziato dalla regione Puglia.<br>In 400 ore ho appreso:
+                            </p>
+                            <ul class="text-justify">
+                                <li>Norme della sicurezza sul posto di lavoro</li>
+                                <li>Fondamenta di Networking</li>
+                                <li>Database con PostgreSQL ed integrazione con C#</li>
+                                <li>Gestione ed Analisi dei requisiti</li>
+                                <li>HTML</li>
+                                <li>CSS e framework Bootstrap</li>
+                                <li>PHP e framework Laravel</li>
+                                <li>Java</li>
+                                <li>Wordpress cms per creazione e gestione di siti</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="year-badge-bottom-left">2024</span>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4 offset-md-4 mb-4 card-2" onclick="toggleDetails(this)">
+                    <span class="year-badge-top-right">2021</span>
+                    <span class="year-line"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4>Canto Moderno</h4>
+                        <h6 class="mb-0">MusikBox - Accademia LaFenice</h6>
+                        <div class="details">
+                            <p>Mi sono specializzato in:</p>
+                            <div class="d-flex align-items-center">
+                                <ul class="me-3 text-justify">
+                                    <li>Swing.</li>
+                                    <li>Soul.</li>
+                                    <li>Pop.</li>
+                                    <li>Pop-Rock.</li>
+                                    <li>Indie-Rock.</li>
+                                </ul>
+                                <img src="img/singer.jpg" width="200px" height="200px" class="img-fluid rounded shadow">
+                            </div>
+                            <p class="mt-2">Ascolta la canzone con cui mi classificai 3° al Concorso Umberto
+                                Giordano del 2018: <br><a
+                                    href="https://www.facebook.com/MusikBoxCorsiDiMusica/videos/1899168903428638"
+                                    class="text-dark" target="_blank">Human - Rag&Bone Man by Michele C. Radicci</a>
+                            </p>
+                        </div>
+                    </div>
+                    <span class="year-badge-bottom-right">2017</span>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4 card-1" onclick="toggleDetails(this)">
+                    <span class="year-badge">2017</span>
+                    <span class="year-line-left"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4>Masterclass di Doppiaggio</h4>
+                        <h6 class="mb-0">Lord Byron College - Bari</h6>
+                        <div class="details">
+                            <p>Ho appreso lavorando a <br>stretto contatto con Luca Ward:</p>
+                            <div class="d-flex align-items-center">
+                                <ul class="me-3 text-start">
+                                    <li>Fondamenti di fonetica e dizione</li>
+                                    <li>Tecniche di respirazione.</li>
+                                    <li>Fondamenta di timing.</li>
+                                    <li>Doppiaggio di anelli di film e serie tv.</li>
+                                    <li>Tecniche di doppiaggio di serie animate.</li>
+                                    <li>Tecniche di Post-produzione.</li>
+                                </ul>
+                                <img src="img/dubber.png" width="200px" height="200px" class="img-fluid rounded shadow">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="year-badge-bottom-left">2016</span>
+                </div>
+            </div>
+
+
+            <div class="row mt-4">
+                <div class="col-md-4 offset-md-4 mb-4 card-2" onclick="toggleDetails(this)">
+                    <span class="year-badge-top-right">2012</span>
+                    <span class="year-line"></span>
+                    <div class="card shadow-lg text-center p-3">
+                        <h4>Diploma: <br>Perito Tecnico Informatico</h4>
+                        <h6 class="mb-0">ITIS G. Galilei</h6>
+                        <div class="details">
+                        </div>
+                    </div>
+                    <span class="year-badge-bottom-right">2007</span>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="#" id="backToTop" aria-label="Torna su" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="color: gray;"
+                        fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+                    </svg>
+                </a>
+            </div>
+
         </div>
     </div>
     <!-- FOOTER -->

@@ -29,10 +29,40 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// function toggleDetails(card) {
-// 	let details = card.querySelector(".details");
-// 	details.style.display = details.style.display === "none" ? "block" : "none";
-// }
+function toggleDetails(card) {
+    let details = card.querySelector(".details");
+
+    document.querySelectorAll(".details").forEach(openDetail => {
+        if (openDetail !== details && openDetail.style.display === "block") {
+            openDetail.style.height = "0";
+
+
+            setTimeout(() => {
+                openDetail.style.display = "none"; 
+            }, 300);
+        }
+    });
+
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+        details.style.height = details.scrollHeight + "px";
+
+        setTimeout(() => {
+
+            card.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 300);
+    } else {
+
+        details.style.height = "0";
+        setTimeout(() => {
+            details.style.display = "none";
+        }, 300);
+    }
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 	var backToTopElement = document.getElementById('backToTop');
 
