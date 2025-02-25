@@ -1,18 +1,18 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = trim($_POST["nome"]);
-    $cognome = trim($_POST["cognome"]);
-    $email = trim($_POST["email"]);
-    $messaggio = trim($_POST["messaggio"]);
-    
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = trim($_POST['nome']);
+    $cognome = trim($_POST['cognome']);
+    $email = trim($_POST['email']);
+    $messaggio = trim($_POST['messaggio']);
+
     if (empty($nome) || empty($cognome) || empty($email) || empty($messaggio)) {
         echo "<script>alert('Tutti i campi sono obbligatori!!!');</script>";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Inserisci un'email valida!');</script>";
     } else {
-        $to = "mcradicci@gmail.com";
-        $subject = "Nuovo messaggio dal modulo contatti";
-        $headers = "From: fullstackmike@altervista.org";
+        $to = 'mcradicci@gmail.com';
+        $subject = 'Nuovo messaggio dal modulo contatti';
+        $headers = 'From: fullstackmike@altervista.org';
         $body = "Nome: $nome\nCognome: $cognome\nEmail: $email\nMessaggio:\n$messaggio";
         if (mail($to, $subject, $body, $headers)) {
             echo "<script>alert('Messaggio inviato con successo!');</script>";
@@ -55,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="chi-sono.html">CHI SONO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dicono-di-me.html">DICONO DI ME</a></li>
                     <li class="nav-item"><a class="nav-link" href="competenze.html">COMPETENZE</a></li>
                     <li class="nav-item"><a class="nav-link" href="storico.html">STORICO</a></li>
                     <li class="nav-item"><a class="nav-link" href="contattami.php">CONTATTAMI</a></li>
@@ -81,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <ul class="navbar-nav text-center">
                         <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="chi-sono.html">CHI SONO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dicono-di-me.html">DICONO DI ME</a></li>
                         <li class="nav-item"><a class="nav-link" href="competenze.html">COMPETENZE</a></li>
                         <li class="nav-item"><a class="nav-link" href="storico.html">STORICO</a></li>
                         <li class="nav-item"><a class="nav-link" href="contattami.php">CONTATTAMI</a></li>
@@ -101,8 +103,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form id="contact-form" method="POST">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
-                        <input type="text" name="nome" class="form-control shadow-sm" placeholder="Es. Mario" id="nome"
-                            required>
+                        <input type="text" name="nome" class="form-control shadow-sm" placeholder="Es. Mario"
+                            id="nome" required>
                     </div>
                     <div class="mb-3">
                         <label for="cognome" class="form-label">Cognome</label>
@@ -116,8 +118,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="mb-3">
                         <label for="messaggio" class="form-label">Messaggio</label>
-                        <textarea class="form-control shadow-sm" name="messaggio" id="messaggio"
-                            placeholder="Inserisci il tuo messaggio" rows="4" required></textarea>
+                        <textarea class="form-control shadow-sm" name="messaggio" id="messaggio" placeholder="Inserisci il tuo messaggio"
+                            rows="4" required></textarea>
                     </div>
                     <div class="text-center mb-3">
                         <button type="submit" class="btn btn-primary text-dark shadow-sm"
@@ -126,13 +128,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <img src="img/envelopepng.png" alt="Contattami" class="img-fluid rounded shadow" style="width: 300px;">
+                <img src="img/envelopepng.png" alt="Contattami" class="img-fluid rounded shadow"
+                    style="width: 300px;">
             </div>
         </div>
         <div class="text-center mt-3">
             <a href="#" id="backToTop" aria-label="Torna su" style="display: none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="color: gray;" fill="currentColor"
-                    class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="color: gray;"
+                    fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
                 </svg>
