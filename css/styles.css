@@ -309,13 +309,11 @@ body {
 
 #backToTop {
 	position: fixed;
-	bottom: 20px;
+	bottom: 60px;
 	right: 20px;
 	cursor: pointer;
 	display: none;
-	/* Nasconde inizialmente */
 	z-index: 1000;
-	/* Assicura che sia sopra gli altri elementi */
 }
 
 .card:hover {
@@ -326,15 +324,24 @@ body {
 	.col-bot {
 		margin-bottom: 15px;
 	}
+
 	.typed-cursor {
 		font-size: inherit;
 		color: inherit;
 		display: inline;
 		font-size: large !important;
 	}
+
 	#element {
 		font-size: large !important;
 		font-weight: 600;
+	}
+
+	#backToTop {
+		position: fixed;
+		bottom: 20px;
+		right: 40px;
+		z-index: 1000;
 	}
 }
 
