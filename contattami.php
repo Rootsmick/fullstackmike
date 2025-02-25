@@ -1,3 +1,29 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = trim($_POST["nome"]);
+    $cognome = trim($_POST["cognome"]);
+    $email = trim($_POST["email"]);
+    $messaggio = trim($_POST["messaggio"]);
+    
+    if (empty($nome) || empty($cognome) || empty($email) || empty($messaggio)) {
+        echo "<script>alert('Tutti i campi sono obbligatori!!!');</script>";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Inserisci un'email valida!');</script>";
+    } else {
+        $to = "mcradicci@gmail.com";
+        $subject = "Nuovo messaggio dal modulo contatti";
+        $headers = "From: fullstackmike@altervista.org";
+        $body = "Nome: $nome\nCognome: $cognome\nEmail: $email\nMessaggio:\n$messaggio";
+        if (mail($to, $subject, $body, $headers)) {
+            echo "<script>alert('Messaggio inviato con successo!');</script>";
+        } else {
+            echo "<script>alert('Errore nell'invio del messaggio. Riprova.');</script>";
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -31,7 +57,7 @@
                     <li class="nav-item"><a class="nav-link" href="chi-sono.html">CHI SONO</a></li>
                     <li class="nav-item"><a class="nav-link" href="competenze.html">COMPETENZE</a></li>
                     <li class="nav-item"><a class="nav-link" href="storico.html">STORICO</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contattami.html">CONTATTAMI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contattami.php">CONTATTAMI</a></li>
                 </ul>
             </div>
         </div>
@@ -57,7 +83,7 @@
                         <li class="nav-item"><a class="nav-link" href="chi-sono.html">CHI SONO</a></li>
                         <li class="nav-item"><a class="nav-link" href="competenze.html">COMPETENZE</a></li>
                         <li class="nav-item"><a class="nav-link" href="storico.html">STORICO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contattami.html">CONTATTAMI</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contattami.php">CONTATTAMI</a></li>
                     </ul>
 
                 </div>
@@ -72,7 +98,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <form id="contact-form">
+                <form id="contact-form" method="POST">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
                         <input type="text" name="nome" class="form-control shadow-sm" placeholder="Es. Mario" id="nome"

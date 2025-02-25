@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			return;
 		}
 
-		alert("Messaggio inviato con successo!");
-		document.getElementById("contact-form").reset();
+		document.getElementById("contact-form").submit();
 	});
 });
 
