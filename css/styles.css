@@ -296,8 +296,8 @@ body {
 }
 
 .btn:hover {
-	background-color: #efeeee;
-	/* background-color: #d5dce4; */
+	/* background-color: #efeeee; */
+	background-color: #d9e2ec;
 	/* background-color: #bdad8d; */
 	border: none;
 }

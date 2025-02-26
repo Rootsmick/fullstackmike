@@ -41,6 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="js/scripts.js"></script>
+    <meta property="og:url" content="https://fullstackmike.altervista.org">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Full Stack Mike">
+    <meta property="og:description" content="Scopri di più su Michele C. Radicci">
+    <meta property="og:image" content="https://fullstackmike.altervista.org/img/rounded-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 </head>
 
 <body>
@@ -128,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </form>
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-center" style="margin-bottom: 40px">
+            <div class="col-md-3 d-flex align-items-center justify-content-center ms-5" style="margin-bottom: 40px">
                 <img src="img/envelopepng.png" alt="Contattami" class="img-fluid rounded shadow" style="width: 300px;">
             </div>
         </div>

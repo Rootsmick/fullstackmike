@@ -3,32 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio Radicci Michele Claudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Sono</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/png" href="img/turq.svg">
+    <!-- <link rel="icon" type="image/png" href="img/logo.png"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://kit.fontawesome.com/411723ea08.js" crossorigin="anonymous"></script>
-    <meta property="og:url" content="https://fullstackmike.altervista.org">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Full Stack Mike">
-    <meta property="og:description" content="Scopri di più su Michele C. Radicci">
-    <meta property="og:image" content="https://fullstackmike.altervista.org/img/rounded-logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
 </head>
 
 <body>
     <!-- HEADER -->
+    <!-- <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/black-logo.png" width="100px" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chi-sono.html">CHI SONO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competenze.html">COMPETENZE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lavori.html">I MIEI LAVORI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contattami.html">CONTATTAMI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
     <nav class="navbar navbar-expand-lg d-lg-block d-none bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img id="logo" src="img/black-logo.svg" width="auto"
@@ -84,117 +93,37 @@
         </div>
     </nav>
 
-    <!-- HOME PAGE -->
-    <div class="container d-flex flex-column justify-content-center align-items-center" style="margin-top: 100px;">
-        <section>
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10 col-xl-8 text-center">
-                    <h1 class="mb-4">Dicono di me</h1>
-                    <p class="mb-4 pb-2 mb-md-5 pb-md-0">
-                        Alcuni commenti da parte di colleghi con cui ho avuto il piacere di collaborare.
-                    </p>
-                </div>
-            </div>
+    <!-- CHI SONO -->
+    <div class="container d-flex justify-content-center" style="margin-top: 100px;">
 
-            <div class="row text-center">
-                <div class="col-md-4 mb-5 mb-md-0 animate__animated animate__zoomIn">
-                    <div class="d-flex justify-content-center mb-4">
-                        <img src="img/mauro.png" class="rounded-circle shadow-1-strong" width="150" height="150" />
-                    </div>
-                    <h5 class="mb-3">Mauro Di Marino</h5>
-                    <h6 class="text-desc mb-3">UI/UX Designer</h6>
-                    <p class="px-xl-3">
-                        <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                        tenetur.
-                    </p>
-                    <ul class="list-unstyled d-flex justify-content-center mb-0">
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-5 mb-md-0 animate__animated animate__zoomIn" style="animation-delay: 1s;">
-                    <div class="d-flex justify-content-center mb-4">
-                        <img src="img/siciliani3.png" class="rounded-circle shadow-1-strong" width="150" height="150" />
-                    </div>
-                    <h5 class="mb-3">Mario Siciliani</h5>
-                    <h6 class="text-desc mb-3">Senior Full Stack Developer</h6>
-                    <p class="px-xl-3">
-                        <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
-                        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
-                    </p>
-                    <ul class="list-unstyled d-flex justify-content-center mb-0">
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-0 animate__animated animate__zoomIn" style="animation-delay: 2s;">
-                    <div class="d-flex justify-content-center mb-4">
-                        <img src="img/mansi.jpg" class="rounded-circle shadow-1-strong" width="150" height="150" />
-                    </div>
-                    <h5 class="mb-3">Francesco Mansi</h5>
-                    <h6 class="text-desc mb-3">Senior Web Developer</h6>
-                    <p class="px-xl-3">
-                        <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
-                    </p>
-                    <ul class="list-unstyled d-flex justify-content-center mb-0">
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-star fa-sm text-warning"></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
-        </section>
-        <div class="container d-flex flex-row justify-content-center align-items-center mt-5 gap-3">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://fullstackmike.altervista.org" target="_blank"
-                class="btn cv-btn">
-                <i class="fab fa-facebook"></i> Condividimi su Facebook
-            </a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://fullstackmike.altervista.org" target="_blank"
-                class="btn cv-btn">
-                <i class="fab fa-linkedin"></i> Condividimi su LinkedIn
-            </a>
+        <div class="row mt-4 align-items-center">
+            <div class="col-md-4 text-center animate__animated animate__zoomIn">
+                <img src="img/foto.png" alt="Foto profilo" class="img-fluid rounded-circle shadow">
+            </div>
+            <div class="col-md-8 py-3 animate__animated animate__zoomIn">
+                <h1 class="text-center">Chi sono</h1>
+                <p class="text-justify">
+                    Ciao! Mi chiamo <u>Michele Claudio Radicci</u>, ma per tutti sono Mike. <br>
+                    Sono un Web Developer
+                    appassionato
+                    del mondo tech e dell'evoluzione digitale.<br>
+                    Amo creare progetti innovativi e lavorare su nuove sfide tecnologiche.
+                    Ho esperienza in Front-End con linguaggi HTML, CSS ed il framework Bootstrap e in Back-End con
+                    Java,
+                    PHP ed il framework Laravel.
+                    Nel mio tempo libero mi piace Cantare in quanto lo trovo liberatorio e tramite il quale riesco
+                    ad
+                    esprimere tutte le mie emozioni.
+                </p>
+                <p class="text-justify">
+                    Questo sito è stato creato per condividere il mio lavoro, le mie competenze e per permetterti di
+                    contattarmi facilmente.
+                    Se vuoi sapere di più su di me, sentiti libero di esplorare il sito!
+                </p>
+            </div>
         </div>
+
         <div class="text-center mt-3">
             <a href="#" id="backToTop" aria-label="Torna su" style="display: none;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="color: gray;" fill="currentColor"
