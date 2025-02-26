@@ -9,21 +9,15 @@
 
 .card {
 	overflow: hidden;
-	/* Se il contenuto esce dalla card */
 	max-height: none;
-	/* Rimuovi eventuali limiti di altezza se presenti */
 	transition: max-height 0.3s ease-in-out;
-	/* Anima l'altezza per l'effetto di espansione */
 }
 
 .details {
 	display: none;
-	/* Per default nascondi il contenuto */
 	overflow: hidden;
 	transition: height 0.3s ease-in-out;
-	/* Aggiungi una transizione per un'animazione fluida */
 	height: 0;
-	/* Imposta un'altezza di 0 per nascondere il contenuto */
 }
 
 
@@ -118,7 +112,8 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+.btn {
 	font-family: "Roboto", serif;
 }
 
@@ -365,4 +360,127 @@ body {
 #element {
 	font-size: xx-large;
 	font-weight: 600;
+}
+
+.separator {
+	width: 1px;
+	background-color: gray;
+	height: 30px;
+	margin: auto 10px;
+}
+
+body.dark-mode {
+	background-color: rgb(84, 97, 100);
+	/* background-color: rgb(68, 68, 68, 0.7); */
+	color: rgb(248, 242, 229);
+}
+
+.bg-mode {
+	background-color: rgb(50, 72, 78) !important;
+}
+
+body.dark-mode .navbar-nav li,
+body.dark-mode .navbar-nav a,
+body.dark-mode .cv-btn,
+body.dark-mode .cv-btn:hover {
+	color: rgb(248, 242, 229) !important;
+}
+
+body.dark-mode .card, body.dark-mode input, body.dark-mode textarea{
+	background-color: rgb(248, 242, 229);
+}
+
+body.dark-mode .nav-link:hover {
+	color: rgba(255, 242, 216, 0.8) !important;
+}
+
+body.dark-mode .footer {
+	background-color: rgb(50, 72, 78, 0.7) !important;
+	padding: 10px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+body.dark-mode .navbar-toggler-icon {
+	filter: brightness(0) saturate(100%) invert(94%) sepia(10%) saturate(250%) hue-rotate(10deg) brightness(95%) contrast(90%);
+}
+
+body.dark-mode .navbar-toggler {
+	border: 1px solid rgb(248, 242, 229);
+	/* Cambia solo il bordo */
+}
+
+
+body.dark-mode #whatsapp svg,
+body.dark-mode #linkedin svg,
+body.dark-mode #github svg {
+	fill: #f8f2e5;
+}
+
+#whatsapp svg {
+	fill: rgb(0, 215, 87, 0.7);
+}
+
+#linkedin svg {
+	fill: hsl(210, 91%, 40%, 0.7);
+}
+
+#github svg {
+	fill: hsla(214, 8%, 17%, 0.7);
+}
+
+body.dark-mode .navbar {
+	background-color: rgb(50, 72, 78) !important;
+	/* Usa il colore della classe bg-mode */
+}
+
+body.dark-mode .offcanvas {
+	background-color: rgb(50, 72, 78) !important;
+	/* Cambia lo sfondo del menu mobile */
+}
+
+body.dark-mode .btn {
+	/* background-color: #d4c3a1; */
+	/* background-color: #efeeee; */
+	background-color: rgb(50, 72, 78);
+	border: none;
+}
+
+body.dark-mode .btn:hover {
+	background-color: rgb(50, 72, 78, 0.7);
+	/* background-color: #d5dce4; */
+	/* background-color: #bdad8d; */
+	border: none;
+}
+
+body.dark-mode .year-line {
+	position: absolute;
+	width: 4px;
+	background-color: rgb(50, 72, 78);
+	top: 10px;
+	bottom: 10px;
+	right: 10px;
+	z-index: 998;
+}
+
+body.dark-mode .year-line-left {
+	position: absolute;
+	width: 4px;
+	background-color: rgb(50, 72, 78);
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	z-index: 998;
+}
+
+.text-desc {
+	color: #0D6EFD;
+}
+
+body.dark-mode .text-desc {
+	color: #f8f2e5;
+}
+
+.cv-btn, .cv-btn:hover{
+	color: #424242;
 }

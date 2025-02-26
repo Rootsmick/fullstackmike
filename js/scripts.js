@@ -100,22 +100,22 @@ document.addEventListener("DOMContentLoaded", function () {
 // 	});
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-	var typed3 = new Typed('#element', {
-		strings: ['- Front-End', '- Back-End', '- Full Stack Developer -'],
-		typeSpeed: 50,
-		backSpeed: 50,
-		backDelay: 10,
-		startDelay: 500,
-		showCursor: true,
-		cursorChar: '|',
-		loop: false,
-		smartBackspace: true,
-		onComplete: function () {
-			document.querySelector('.typed-cursor').style.display = 'none'; // Nasconde il cursore
-		}
-	});
-});
+// document.addEventListener("DOMContentLoaded", function () {
+// 	var typed3 = new Typed('#element', {
+// 		strings: ['- Front-End', '- Back-End', '- Full Stack Developer -'],
+// 		typeSpeed: 50,
+// 		backSpeed: 50,
+// 		backDelay: 10,
+// 		startDelay: 500,
+// 		showCursor: true,
+// 		cursorChar: '|',
+// 		loop: false,
+// 		smartBackspace: true,
+// 		onComplete: function () {
+// 			document.querySelector('.typed-cursor').style.display = 'none'; // Nasconde il cursore
+// 		}
+// 	});
+// });
 
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 (function () {
@@ -126,7 +126,80 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 	s1.setAttribute('crossorigin', '*');
 	s0.parentNode.insertBefore(s1, s0);
 	Tawk_API = Tawk_API || {};
-Tawk_API.onLoad = function () {
-    Tawk_API.showWidget();
-};
+	Tawk_API.onLoad = function () {
+		Tawk_API.showWidget();
+	};
 })();
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+// 	const button = document.getElementById("toggle-dark-mode");
+// 	const body = document.body;
+// 	const navbar = document.querySelector(".navbar");
+// 	const logo = document.getElementById("logo");
+
+// 	// Controlla se la modalità dark è già attiva nei localStorage
+// 	if (localStorage.getItem("dark-mode") === "enabled") {
+// 	  body.classList.add("dark-mode");
+// 	  navbar.classList.add("bg-mode");  // Aggiungi bg-dark alla navbar
+// 	  logo.src = "img/dark-logo.svg";
+// 	} else {
+// 		logo.src = "img/black-logo.svg"; // Imposta il logo predefinito
+// 	  }
+
+// 	// Aggiungi l'evento di click al pulsante
+// 	button.addEventListener("click", function(event) {
+// 	  event.preventDefault(); // Evita che il link cambi pagina
+
+// 	  // Alterna la modalità dark
+// 	  body.classList.toggle("dark-mode");
+// 	  navbar.classList.toggle("bg-mode");  // Alterna bg-dark nella navbar
+
+// 	  // Salva la preferenza dell'utente nel localStorage
+// 	  if (body.classList.contains("dark-mode")) {
+// 		logo.src = "img/dark-logo.svg";
+// 		localStorage.setItem("dark-mode", "enabled");
+// 	  } else {
+// 		logo.src = "img/black-logo.svg";
+// 		localStorage.setItem("dark-mode", "disabled");
+// 	  }
+// 	});
+//   });
+
+document.addEventListener("DOMContentLoaded", function () {
+	const toggleButtons = document.querySelectorAll("#toggle-dark-mode"); // Seleziona tutti i pulsanti (desktop e mobile)
+	const body = document.body;
+	const logoImages = document.querySelectorAll(".navbar-brand img"); // Seleziona tutti i loghi nelle navbar
+	const mobileNavbar = document.querySelector(".navbar"); // Navbar mobile
+
+	function updateDarkModeUI(isDarkMode) {
+		if (isDarkMode) {
+			body.classList.add("dark-mode");
+			mobileNavbar.classList.add("bg-mode");
+			logoImages.forEach(img => img.src = "img/dark-logo.svg");
+			toggleButtons.forEach(btn => btn.textContent = "LIGHT MODE"); // Cambia testo su tutti i pulsanti
+		} else {
+			body.classList.remove("dark-mode");
+			mobileNavbar.classList.remove("bg-mode");
+			logoImages.forEach(img => img.src = "img/black-logo.svg");
+			toggleButtons.forEach(btn => btn.textContent = "DARK MODE"); // Cambia testo su tutti i pulsanti
+		}
+	}
+
+	// Controlla se la dark mode è attiva nel localStorage
+	const isDarkMode = localStorage.getItem("dark-mode") === "enabled";
+	updateDarkModeUI(isDarkMode);
+
+	// Aggiunge event listener a tutti i pulsanti toggle
+	toggleButtons.forEach(button => {
+		button.addEventListener("click", function (event) {
+			event.preventDefault();
+			const isDarkModeNow = !body.classList.contains("dark-mode");
+			localStorage.setItem("dark-mode", isDarkModeNow ? "enabled" : "disabled");
+			updateDarkModeUI(isDarkModeNow);
+		});
+	});
+});
+
+
