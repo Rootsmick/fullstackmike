@@ -338,6 +338,8 @@ body {
 		right: 40px;
 		z-index: 1000;
 	}
+
+	
 }
 
 .st3 {
@@ -483,4 +485,9 @@ body.dark-mode .text-desc {
 
 .cv-btn, .cv-btn:hover{
 	color: #424242;
+}
+
+.btn-linked{
+	margin-top: 10px;
+	min-width: 250px
 }
